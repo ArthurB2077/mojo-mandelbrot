@@ -1,9 +1,9 @@
-from python import Python
 from algorithm import parallelize, vectorize
 from benchmark import Benchmark
 from complex import ComplexSIMD, ComplexFloat64
 from math import iota
 from os import env
+from python import Python
 from python.object import PythonObject
 from runtime.llcl import num_cores, Runtime
 from tensor import Tensor
@@ -77,3 +77,10 @@ def show_plot(tensor: Tensor[float_type]):
 
 def main():
     show_plot(compute_mandelbrot())
+
+# We showed a naive implementation of the Mandelbrot algorithm, but
+# there are two things we can do to speed it up.
+# We can early-stop the loop iteration when a pixel is known to have escaped,
+# and we can leverage Mojo’s access to hardware by vectorizing the loop,
+# computing multiple pixels simultaneously.
+# To do that we will use the vectorize higher order generator.

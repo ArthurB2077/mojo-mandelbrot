@@ -5,7 +5,12 @@ services:
     build: .
     environment:
       - DISPLAY=:0
+      - MODULAR_HOME=/home/mojo/.modular
+      - MOJO_PYTHON_LIBRARY=/usr/lib/x86_64-linux-gnu/libpython3.10.so.1.0
     volumes:
       - ./main.🔥:/home/mojo/workspace/main.🔥
+      - ./vectorize_v2.🔥:/home/mojo/workspace/vectorize_v2.🔥
+      - ./parallelized_v3.🔥:/home/mojo/workspace/parallelized_v3.🔥
+      - ./benchmark_4.🔥:/home/mojo/workspace/benchmark_4.🔥
       - /tmp/.X11-unix:/tmp/.X11-unix
     network_mode: "host"
