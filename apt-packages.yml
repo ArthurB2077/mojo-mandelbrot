@@ -1,9 +1,0 @@
-distribution: Ubuntu 22.04 jammy
-dependencies:
-  - python3-matplotlib
-  - PyQt5 (to review)
-  - pip
-  - modular
-  - mojo
-  - libpython3.10.so.1.0
-  - python-is-python3

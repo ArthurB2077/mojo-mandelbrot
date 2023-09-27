@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  mojo-runner:
+    build: .
+    environment:
+      - DISPLAY=:0
+    volumes:
+      - ./main.🔥:/home/mojo/workspace/main.🔥
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    network_mode: "host"

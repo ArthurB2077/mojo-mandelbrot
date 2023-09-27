@@ -1,0 +1,8 @@
+apt-packages.yml
+docker-compose.yaml
+Dockerfile
+LICENSE
+README.md
+.dockerignore
+.git
+.gitignore
